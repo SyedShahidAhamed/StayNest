@@ -1,0 +1,48 @@
+<%-layout("/layouts/boilerplate") %>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <form method="post" action="/listing/<%=data._id %>?_method=PUT" class="needs-validation" novalidate enctype="multipart/form-data">
+                <h3>Edit your Listing</h3>
+                <div class="mb-3">
+                    <label for="form" class="form-label">Title</label>
+                    <input type="text" placeholder="Enter Your Listing Title" value="<%=data.title %>" name="title" class="form-control" required>
+                  <div class="valid-feedback">Looks good!</div>   
+                  <div id="validationServerUsernameFeedback" class="invalid-feedback">Enter a valid Title.</div>   
+                </div>
+                <div class="mb-3">
+                    <label for="form" class="form-label">Description</label>
+                    <textarea name="description" class="form-control"><%=data.title %></textarea>
+                  <div class="valid-feedback">Looks good!</div> 
+                  <div id="validationServerUsernameFeedback" class="invalid-feedback">Enter a valid Description.</div>  
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Original Image</label><br>
+                    <img src="<%=data.image.url %>" class="rounded">
+                  </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image</label>
+                    <input type="file" placeholder="Upload Your New Image" name="image" class="form-control">
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-4">
+                    <label for="form" class="form-label">Price</label>
+                    <input type="number" placeholder="Enter Your Listing Price" value="<%=data.price %>" name="price" class="form-control" required>
+                  <div id="validationServerUsernameFeedback" class="invalid-feedback">Enter a valid Price.</div>   
+                </div>
+                <div class="mb-3 col-8">
+                    <label for="form"class="form-label">Location</label>
+                    <input type="text" placeholder="Enter Your Listing Location" value="<%=data.location %>" name="location" class="form-control" required>
+                  <div id="validationServerUsernameFeedback" class="invalid-feedback">Enter a valid Location.</div>   
+                </div>
+                </div>
+                <div class="mb-3">
+                    <label for="form" class="form-label">Country</label>
+                    <input type="text" placeholder="Enter Your Listing Country" value="<%=data.country %>" name="country" class="form-control" required>
+                  <div id="validationServerUsernameFeedback" class="invalid-feedback">Enter a valid Country.</div>   
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+</body>

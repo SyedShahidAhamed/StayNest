@@ -1,0 +1,23 @@
+<%-layout("/layouts/boilerplate") %>
+<body>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <form method="post" action="/login" class="needs-validation" novalidate>
+                <h3>Login For Airbnb</h3>
+                <div class="mb-3">
+                    <label for="form" class="form-label">Username</label>
+                    <input type="text" placeholder="Enter Your Listing Title" name="username" class="form-control" required>
+                  <div class="valid-feedback">Looks good!</div>   
+                  <div id="validationServerUsernameFeedback" class="invalid-feedback">Enter a Valid Username.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="form" class="form-label">Password</label>
+                    <input type="password" placeholder="Enter Your Listing Title" name="password" class="form-control" required>
+                  <div class="valid-feedback">Looks good!</div>   
+                  <div id="validationServerUsernameFeedback" class="invalid-feedback">Enter a Valid Password.</div>
+                </div>
+                <button class="btn btn-danger">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
